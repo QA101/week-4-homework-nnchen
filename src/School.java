@@ -3,9 +3,12 @@ import java.util.ArrayList;
 public class School {
 	
 	//Variables for this class
-	ArrayList<Book> catalog = new ArrayList<Book>();
-	int numStudents = 0;
-	String name;
+	ArrayList<Book> catalog1 = new ArrayList<Book>();
+	static String name;
+	int students;
+	int staff;
+	String mascot;
+	
 
 	/**
 	 * Start the execution of your program here.
@@ -27,12 +30,12 @@ public class School {
 	 * Can a school have a library? How would this be represented within the school?
 	 * 
 	 */
-	public static void main(String args[]) {
-		//TODO create a school (similar to the library)
+	ArrayList<Book> catalog = new ArrayList<Book>();
+	
+	public static void main(String[] args) {
+		School scho = new School(name);
 		
-		//TODO Print the toString method in school. Such as, school.toString()
-		
-		//TODO Print any other variables that make sense for a school. Be creative.
+		System.out.println(scho.toString());
 	}
 	
 	/**
@@ -42,20 +45,32 @@ public class School {
 	 */
 	public School(String name) {
 		this.name = name;
+		this.students = students;
+		this.staff = staff;
+		this.mascot = mascot;
 	}
 	
 	/**
 	 * Write a method to return a list of all books at the school
+	 * @return 
 	 */
-	public String toString() {
-		//TODO Write a method to return a list of all books at the school
-		return "TODO";
+	public void Library() {
+		catalog1.add(new Book("Alice's Adventures in Wonderland", 200, "Fantasy", "Lewis Carroll"));
+		
+		catalog1.add(new Book("The Catcher in the Rye", 210, "Fiction", "J.D. Salinger"));
+		
+		catalog1.add(new Book("Fear and Loathing in Las Vegas", 204, "Non-Fiction", "Hunter S. Thompson"));
+		
+		catalog1.add(new Book("Harry Potter and the Sorcerer's Stone", 366, "Fantash", "J.K. Rowling"));
+		
+		catalog1.add(new Book("The Shining", 447, "Horror",  "Stephen King"));
 	}
 	
 	/**
 	 * adds a single student to the school
 	 */
 	public void AddSingleStudent() {
+		int numStudents = 1;
 		numStudents++;
 		//Do I need a MAX_STUDENTS ???
 	}
@@ -64,7 +79,8 @@ public class School {
 	 * removes a single student from the school
 	 */
 	public void removeSingleStudent() {
-		if(numStudents > 0) {
+		int numStudents = 0;
+		if(numStudents > 1) {
 			numStudents--;
 		}
 	}
@@ -75,6 +91,7 @@ public class School {
 	 * @return number of students in the school
 	 */
 	public int getStudents() {
+		int numStudents = 0;
 		return numStudents;
 	}
 }
