@@ -1,3 +1,10 @@
+//Hi, I'm having a problem w/ running my program. When I run my program I get 'School@7f31245a'.
+//I know I'm doing something wrong and I think I'm getting confused with my methods. 
+//Please take a look at my code and let me know what I'm doing wrong. 
+//Thanks!
+
+
+
 import java.util.ArrayList;
 
 public class School {
